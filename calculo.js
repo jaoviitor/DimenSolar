@@ -18,7 +18,7 @@ function media(){
     const dez = parseInt(document.getElementById("dezembro").value);
 
     //média anual
-    mediaAnual = Math.ceil((jan + fev + mar + mai + abr + jun + jul + ago + set + out + nov + dez) / 12);
+    mediaAnual = (jan + fev + mar + mai + abr + jun + jul + ago + set + out + nov + dez) / 12;
 
     console.log(mediaAnual);
 
@@ -82,4 +82,12 @@ function atualizarIrradiacao() {
 
             
         })
+}
+
+function atualizarNumPaineis() {
+    var potenciaSelecionada = document.getElementById('potenciaSaida').value;
+    var numPaineis = (demandaPrevista * 1000) / parseInt(potenciaSelecionada);
+    var numPaineisElement = document.getElementById('numPaineis');
+    numPaineisElement.value = `${parseInt(numPaineis)}`
+
 }
