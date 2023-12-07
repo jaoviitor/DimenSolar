@@ -5,6 +5,7 @@
     <meta charset="UTF-8"> <!--Para utilizar acentos-->
     <title>Dimensionamento de Placa Fotovoltaica</title> <!--TÍTULO DA ABA DA PÁG-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
@@ -704,13 +705,27 @@
             <label for="demandaPrevista">Demanda Prevista</label>
             <input id="demandaPrevista" type="text" readonly>
 
+            <label for="potenciaSaida">Potência de Saída</label>
+            <select id="potenciaSaida" onchange="atualizarNumPaineis()">
+                <option value="" disabled selected>Selecione a potência de saída</option>
+                <option value="280">280</option>
+                <option value="275">275</option>
+                <option value="270">270</option>
+                <option value="265">265</option>
+                <option value="260">260</option>
+            </select>
+
             <label for="numPaineis">Número de Painéis</label>
             <input id="numPaineis" type="text" readonly>
 
         </section>
     </div>
+    <footer style="background-color: #00193B; color: white; text-align: center; padding: 20px;">
+        <p>&copy; 2023 DimenSolar</p>
+    </footer>
     <script src="calculo.js"></script>
     <script src="https://kit.fontawesome.com/2cbafb569e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
