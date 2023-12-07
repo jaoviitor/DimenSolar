@@ -29,4 +29,4 @@ def obter_irradiacao(cidade):
   return jsonify(response)
       
         
-app.run(debug = False, port=10000)
+app.run(debug = False)
