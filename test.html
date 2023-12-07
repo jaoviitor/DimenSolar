@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Site</title>
+</head>
+<body>
+    <label for="estado">Estado:</label>
+    <select id="estado" onchange="atualizarCidades()">
+            <option value="ACRE">ACRE</option>
+            <option value="ALAGOAS">ALAGOAS</option>
+    </select>
+
+    <label for="cidade">Cidade:</label>
+    <select id="cidade" onchange="atualizarIrradiacao()">
+    </select>
+
+    <div>
+        <label for="nivelIrradiacao">Nível de Irradiação:</label>
+        <span id="nivelIrradiacao"></span>
+    </div>
+
+    <script>
+        function atualizarCidades() {
+            var estadoSelecionado = document.getElementById('estado').value;
+            
+            // Requisição AJAX para obter cidades do servidor
+            fetch(`http://127.0.0.1:5000/cidades/${estadoSelecionado}`)
+                .then(response => response.json())
+                .then(data => {
+                    var selectCidades = document.getElementById('cidade');
+                    selectCidades.innerHTML = "";
+                    data.forEach(cidade => {
+                        var option = document.createElement('option');
+                        option.text = cidade;
+                        selectCidades.add(option);
+                    });
+                });
+        }
+
+        function atualizarIrradiacao() {
+            var cidadeSelecionada = document.getElementById('cidade').value;
+        
+            // Requisição AJAX para obter a menor irradiação solar do servidor
+            fetch(`http://127.0.0.1:5000/irradiacao/${cidadeSelecionada}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    var nivelIrradiacaoElement = document.getElementById('nivelIrradiacao');
+                    nivelIrradiacaoElement.innerText = `Nível: ${data['menor irradiação']}`;
+                    
+                })
+        }
+    </script>
+</body>
+</html>
