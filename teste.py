@@ -27,8 +27,6 @@ def obter_irradiacao(cidade):
   menor_irradiacao = dados_cidade[['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']].min().min()
   response = {'menor irradiação': menor_irradiacao}
   return jsonify(response)
-
-app.run()
+      
         
-        
-app.run(debug = False)
+app.run(debug = False, port=10000)
