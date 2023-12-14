@@ -49,7 +49,7 @@ function handleRadioClick(radio) {
 function atualizarCidades() {
     var estadoSelecionado = document.getElementById('estado').value;
     
-    // Requisição AJAX para obter cidades do servidor
+    // Requisição para obter cidades do servidor
     fetch(`http://127.0.0.1:5000/cidades/${estadoSelecionado}`)
         .then(response => response.json())
         .then(data => {
@@ -66,7 +66,7 @@ function atualizarCidades() {
 function atualizarIrradiacao() {
     var cidadeSelecionada = document.getElementById('cidade').value;
 
-    // Requisição AJAX para obter a menor irradiação solar do servidor
+    // Requisição para obter a menor irradiação solar do servidor
     fetch(`http://127.0.0.1:5000/irradiacao/${cidadeSelecionada}`)
         .then(response => response.json())
         .then(data => {
