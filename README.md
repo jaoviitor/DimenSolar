@@ -1,6 +1,5 @@
-# DimenSolar
+<h1 align="center">Dimensolar</h1>
 <p align="center"><i>Repositório do projeto DimenSolar</i></p>
-API Flask  to collect solar irradiation data
 
 ##  Sobre o projeto
 
