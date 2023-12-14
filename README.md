@@ -23,7 +23,7 @@ O site utiliza uma API desenvolvida em Python com Flask onde, utilizando Pandas,
 </p>
 
 ## Running
-<h5>Prerequisites</h5>
+<h5>Pré-requisitos</h5>
 <p>Install Pandas, Flask, Flask-CORS</p>
 
 ```bash
