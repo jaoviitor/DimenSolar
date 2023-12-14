@@ -1,5 +1,6 @@
 <h1 align="center">Dimensolar</h1>
 <p align="center"><i>Repositório do projeto DimenSolar</i></p>
+<img src="https://cdn.discordapp.com/attachments/1030689922681688175/1184699055134220303/DimenSolar.png?ex=658cebf9&is=657a76f9&hm=4ab67eecaaf1f95c0fc12351db4360430ec9421556e0f8852301502eb2f10180&">
 
 ##  Sobre o projeto
 
