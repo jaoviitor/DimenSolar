@@ -23,7 +23,12 @@ O site utiliza uma API desenvolvida em Python com Flask onde, utilizando Pandas,
 </p>
 
 ## Running
-```python app.py```
+<h5>Prerequisites</h5>
+<p>Install Pandas, Flask, Flask-CORS</p>
+
+```bash
+python app.py
+```
 
 ## Endpoints
 **Retorna as cidades do estado selecionado**
